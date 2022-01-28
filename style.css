@@ -1,0 +1,766 @@
+@import 'https://fonts.googleapis.com/css?family=Montserrat:300, 400, 700&display=swap';
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: 0; 
+}
+body{
+    scroll-behavior: smooth;
+}
+html{
+    font-size: 10px;
+    font-family: 'Montserrat', sans-serif ; 
+}
+a{
+    text-decoration: none;
+}
+.container{
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+ img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+p{
+    color: black;
+    font-size: 1.4rem;
+    margin-top: 5px;
+    line-height: 2.5rem;
+    font-weight: 300;
+    letter-spacing: .05rem;
+}
+
+.brand h1{
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: white;
+}
+.brand h1 span{
+color: rgb(238, 123, 69);;
+
+
+}
+
+
+/* Header  */
+
+#header {
+	position: fixed;
+	z-index: 1000;
+	left: 0;
+	top: 0;
+	width: 200vw;
+	height: auto;
+}
+#header .header {
+	min-height: 8vh;
+	background-color: rgba(31, 30, 30, 0.24);
+	transition: 0.3s ease background-color;
+}
+#header .nav-bar {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	height: 100%;
+	max-width: 1300px;
+	padding: 0 10px;
+}
+
+#header .nav-list ul {
+	list-style: none;
+	position: absolute;
+	background-color: rgb(31, 30, 30);
+	width: 100vw;
+	height: 100vh;
+	left: 200vw;
+	top: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	z-index: 1;
+	overflow-x: hidden;
+	transition: 0.5s ease left;
+}
+#header .nav-list ul.active {
+	left: 0%;
+}
+#header .nav-list ul a {
+	font-size: 2.5rem;
+	font-weight: 500;
+	letter-spacing: 0.2rem;
+	text-decoration: none;
+	color: white;
+	text-transform: uppercase;
+	padding: 20px;
+	display: block;
+}
+#header .nav-list ul a::after {
+	content: attr(data-after);
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%) scale(0);
+	color: rgba(240, 248, 255, 0.021);
+	font-size: 13rem;
+	letter-spacing: 50px;
+	z-index: -1;
+	transition: 0.3s ease letter-spacing;
+}
+#header .nav-list ul li:hover a::after {
+	transform: translate(-50%, -50%) scale(1);
+	letter-spacing: initial;
+}
+#header .nav-list ul li:hover a {
+	color: crimson;
+}
+#header .hamburger {
+	height: 60px;
+	width: 60px;
+	display: inline-block;
+	border: 3px solid white;
+	border-radius: 50%;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 100;
+	cursor: pointer;
+	transform: scale(0.8);
+	margin-right: 20px;
+}
+#header .hamburger:after {
+	position: absolute;
+	content: '';
+	height: 100%;
+	width: 100%;
+	border-radius: 50%;
+	border: 3px solid white;
+	animation: hamburger_puls 1s ease infinite;
+}
+#header .hamburger .bar {
+	height: 2px;
+	width: 30px;
+	position: relative;
+	background-color: white;
+	z-index: -1;
+}
+#header .hamburger .bar::after,
+#header .hamburger .bar::before {
+	content: '';
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	left: 0;
+	background-color: white;
+	transition: 0.3s ease;
+	transition-property: top, bottom;
+}
+#header .hamburger .bar::after {
+	top: 8px;
+}
+#header .hamburger .bar::before {
+	bottom: 8px;
+}
+#header .hamburger.active .bar::before {
+	bottom: 0;
+}
+#header .hamburger.active .bar::after {
+	top: 0;
+}
+/* End Header  */
+
+
+
+
+/* Intro section */
+
+
+
+
+
+
+#intro{
+    background-image: url(./images/ED21-DV-217.jpg);
+background-size: cover;
+width: 200vw;
+background-position: top center;
+position: relative;
+z-index: 1;
+
+}
+#intro::after {
+    content: '';
+   position: absolute; 
+   left: 0;
+   top: 0;
+   height: 100%;
+   width: 200vw;
+   background-color: black;
+   opacity: .7;
+   z-index: -1;
+}
+#intro .intro{
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 50px;
+    justify-content: flex-start;
+}
+
+/*Into images */
+  #intro .intro{
+    flex-direction: row-reverse;
+}
+ 
+#intro .col-left{
+    height: 360px;
+    width: 100%;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   margin-right: 20px;
+   
+}
+#intro .col-left .about-img{
+    height: 100%;
+    width: auto;
+    position: relative;
+    z-index: 1;
+}
+@media screen and (min-width: 444px) {
+    #intro .col-left .about-img{
+        height: 100%;
+        width: auto;
+    }
+    
+}
+#intro .col-left .about-img::after{
+    content: '';
+    position: absolute;
+    left: -20px;
+    top: 8px;
+    height: 98%;
+    width: 98%;
+    border: 7px solid rgb(155, 78, 43);
+    z-index: -100;
+
+}  
+/*
+end Into images */
+
+
+
+#intro h1{
+    display: block;
+    width: fit-content;
+    font-size: 4rem;
+    position: relative;
+    color: transparent;
+    animation: text_revel .5s ease forwards;
+    animation-delay: 1s;
+}
+#intro h1:nth-child(1){
+    animation-delay: 1s;
+}
+#intro h1:nth-child(2){
+    animation-delay: 2s;
+}
+#intro h1:nth-child(3){
+    animation: text_revel_name .5s ease forwards;
+    animation-delay: 3s;
+}
+
+#intro h1 span {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100% ;
+    width: 0%;
+    background-color: rgb(238, 123, 69);
+    animation: text_revel_box 1s ease;
+    animation-delay: .3s;
+}
+#intro h1:nth-child(1) span{
+   animation-delay: .5s;
+}
+
+#intro h1:nth-child(2) span{
+   animation-delay: 1.5s;
+}
+#intro h1:nth-child(3) span{
+   animation-delay: 2.5s;
+}
+
+#intro .cta{
+    display: inline-block;
+    margin-right: 80px;
+    padding: 10px 30px;
+    color: rgb(214, 144, 52);
+    background-color: transparent;
+    border: 2px solid rgb(214, 144, 52);
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 1rem;
+    margin-top: 36px;
+    transition: .3s ease ;
+    transition-property: background-color, color ;
+}
+#intro .cta:hover{
+    color: white;
+    background-color: rgb(214, 144, 52);
+}
+
+/* end Intro section */
+
+/* Hobbies section  */
+
+#hobbies .hobbies{
+    width: 200vw;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    max-width:1400px;
+    margin: 0 auto;
+    
+    padding: 100px 0;
+}
+#hobbies .section-title{
+    font-size: 4rem;
+    font-weight: 300;
+    color: black;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+}
+#hobbies .section-title span{
+    color: rgb(214, 144, 52);
+}
+#hobbies .hobbies-top{
+    width: 900px;
+    
+}
+
+#hobbies .hobbies-top p{
+    color: black;
+    font-size: 1.4rem;
+    margin-top: 5px;
+    line-height: 2.5rem;
+    font-weight: 300;
+    letter-spacing: .05rem;
+    margin: auto;
+    margin-left: 20vw;
+}
+#hobbies .hobbies-bottom{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+#hobbies .hobbies-item {
+    flex-basis: 80%;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    flex-direction: column;
+    padding: 30px;
+    border-radius: 10px;
+    background-image: url(./images/hobbies.jpg);
+    background-size: cover;
+    margin: 10px 5px;
+   position: relative; 
+   z-index: 1;
+   overflow: hidden;
+}
+#hobbies .hobbies-item::after{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+opacity: .85;
+z-index: -1;
+}
+#hobbies .hobbies-bottom .icon{
+    height: 80px;
+    width: 80px;
+    margin-bottom: 20px;
+}
+#hobbies .hobbies-item h2{
+    font-size: 2rem;
+    color: white;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+#hobbies .hobbies-item p{
+    color: white;
+    text-align: left;
+}
+
+/* End Hobbies section  */
+
+
+/* New skills  */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700&display=swap');
+#Skills{
+  margin-top: 0;
+  padding: 0;
+  width: 200vw;
+  margin: auto;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+#Skills {
+  display: grid;
+  height: 100%;
+  place-items: center;
+  background: whitesmoke;
+}
+::selection{
+  color: #fff;
+  background: #6665ee;
+}
+.skill-bars{
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding: 100px 30px;
+    width: 500px;
+    background: #fff;
+    box-shadow: 5px 5px 20px rgba(0,0,0,0.2);
+    border-radius: 10px;
+
+  }
+
+#Skills .section-title{
+    font-size: 7rem;
+    font-weight: 300;
+    color: black;
+    margin-bottom: 50px;
+    text-transform: uppercase;
+    letter-spacing: .2rem;
+    text-align: center;
+}
+
+#Skills .section-title span{
+    color: rgb(214, 144, 52);
+}
+
+#Skills .skills-top p{
+    color: black;
+    font-size: 1.4rem;
+    margin-top: 5px;
+    line-height: 2.5rem;
+    font-weight: 300;
+    letter-spacing: .05rem;
+}
+
+.skill-bars .bar{
+  margin: 20px 0;
+}
+.skill-bars .bar:first-child{
+  margin-top: 0px;
+}
+.skill-bars .bar .info{
+  margin-bottom: 5px;
+}
+.skill-bars .bar .info span{
+  font-weight: 500;
+  font-size: 17px;
+  opacity: 0;
+  animation: showText 0.5s 1s linear forwards;
+}
+@keyframes showText {
+  100%{
+    opacity: 1;
+  }
+}
+.skill-bars .bar .progress-line{
+  height: 10px;
+  width: 100%;
+  background: #f0f0f0;
+  position: relative;
+  transform: scaleX(0);
+  transform-origin: left;
+  border-radius: 10px;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,0.05),
+              0 1px rgba(255,255,255,0.8);
+  animation: animate 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+@keyframes animate {
+  100%{
+    transform: scaleX(1);
+  }
+}
+.bar .progress-line span{
+  height: 100%;
+  position: absolute;
+  border-radius: 10px;
+  transform: scaleX(0);
+  transform-origin: left;
+  background: #6665ee;
+  animation: animate 1s 1s cubic-bezier(1,0,0.5,1) forwards;
+}
+.bar .progress-line.html span{
+  width: 90%;
+}
+.bar .progress-line.css span{
+  width: 58%;
+}
+.bar .progress-line.jquery span{
+  width: 40%;
+}
+.bar .progress-line.python span{
+  width: 50%;
+}
+.bar .progress-line.mysql span{
+  width: 75%;
+}
+.progress-line span::before{
+  position: absolute;
+  content: "";
+  top: -10px;
+  right: 0;
+  height: 0;
+  width: 0;
+  border: 7px solid transparent;
+  border-bottom-width: 0px;
+  border-right-width: 0px;
+  border-top-color: #000;
+  opacity: 0;
+  animation: showText2 0.5s 1.5s linear forwards;
+}
+.progress-line span::after{
+  position: absolute;
+  top: -28px;
+  right: 0;
+  font-weight: 500;
+  background: #000;
+  color: #fff;
+  padding: 1px 8px;
+  font-size: 12px;
+  border-radius: 3px;
+  opacity: 0;
+  animation: showText2 0.5s 1.5s linear forwards;
+}
+@keyframes showText2 {
+  100%{
+    opacity: 1;
+  }
+}
+.progress-line.html span::after{
+  content: "90%";
+}
+.progress-line.css span::after{
+  content: "55%";
+}
+.progress-line.jquery span::after{
+  content: "40%";
+}
+.progress-line.python span::after{
+  content: "50%";
+}
+.progress-line.mysql span::after{
+  content: "75%";
+}
+
+/* End New skills  */
+
+
+
+/* Footer  */
+
+#footer {
+    width: 200vw;
+	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
+}
+#footer .footer {
+	min-height: 200px;
+	flex-direction: column;
+	padding-top: 50px;
+	padding-bottom: 10px;
+}
+
+#footer h2{
+    color: white;
+    font-weight: 500;
+    font-size: 1.8rem;
+    letter-spacing: .1rem;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+#footer .social-icon{
+    display: flex;
+    margin-bottom: 30px;   
+}
+#footer .social-item{
+    height: 50px;
+    width: 50px;
+    margin: 0 5px;
+
+}
+
+#footer .social-item img {
+	filter: grayscale(1);
+	transition: 0.3s ease filter;
+}
+#footer .social-item:hover img {
+	filter: grayscale(0);
+}
+#footer p {
+	color: white;
+	font-size: 1.3rem;
+}
+
+/* End Footer  */
+
+
+
+/* Animate name */
+@keyframes text_revel_box{
+    50%{
+        width: 100%;
+        left: 0;
+    }
+    100%{
+        width: 0;
+        left: 100%;
+
+    }
+}
+@keyframes text_revel{
+    100%{
+        color: white;
+    }
+}
+@keyframes text_revel_name{
+    100%{
+        color: rgb(209, 99, 49);
+        font-weight: 500 ;
+    }
+}
+
+/* End Animate name */
+
+/* For tablets */
+
+@media only screen and (min-width: 768px) {
+	.cta {
+		font-size: 2.5rem;
+		padding: 20px 60px;
+	}
+	h1.section-title {
+		font-size: 6rem;
+	}
+/* intro  */
+
+ #intro h1{
+    font-size: 6.5rem;
+}
+
+#intro .intro{
+    flex-direction: row;
+}
+#intro .col-left{
+    width: 200px;
+    height: 300px;
+    padding-left: 20px;
+}
+
+#intro .intro .col-left .about-img::after {
+    left: -20px;
+    top: 8px;
+    height: 98%;
+    width: 98%;
+    border: 10px solid solid rgb(155, 78, 43);
+}
+
+#intro h1{
+    text-align: left;
+    margin-left: -1px;
+} 
+/* end intro  */
+
+/* Hobbies section */
+
+#hobbies .hobbies-bottom .hobbies-item{
+flex-basis: 37%;
+margin: 2.5%;
+}
+/* End Hobbies section */
+
+
+/* Skills  */
+#Skills .bar{
+    height: 80px;
+    margin: 0;
+    width: 100%;
+    border-radius: 0;
+}
+#Skills .bar .info{
+height: 35%;
+margin-top: 15px;
+}
+/* End Skills  */
+
+    }
+
+/* ENd For tablets */
+
+
+/* For Desktop */
+@media only screen and (min-width: 1200px) {
+/* header */
+#header .hamburger {
+    display: none;
+}
+#header .nav-list ul {
+    position: initial;
+    display: block;
+    height: auto;
+    width: fit-content;
+    background-color: transparent;
+}
+#header .nav-list ul li {
+    display: inline-block;
+}
+#header .nav-list ul li a {
+    font-size: 1.8rem;
+}
+#header .nav-list ul a:after {
+    display: none;
+}
+/* End header */
+
+/* For intro */
+
+#intro h1{
+    font-size: 6rem;
+    font-weight: 1000;
+
+}
+
+/* End For intro */
+
+/* Hobbies */
+
+#hobbies .hobbies-bottom .hobbies-item {
+    flex-basis: 15%;
+    margin: 2.5%;
+}
+
+/* End Hobbies */
+
+}
+
+/* End For Desktop */
