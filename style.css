@@ -771,7 +771,7 @@ margin-top: 15px;
 /* for mobile */
 
 
-@media screen and (max-width: 400px){
+@media screen and (max-width: 1140px){
 
     #header {
         position: fixed;
