@@ -55,7 +55,7 @@ color: rgb(238, 123, 69);;
 	z-index: 1000;
 	left: 0;
 	top: 0;
-	width: 200vw;
+	width: 100vw;
 	height: auto;
 }
 #header .header {
@@ -79,7 +79,7 @@ color: rgb(238, 123, 69);;
 	background-color: rgb(31, 30, 30);
 	width: 100vw;
 	height: 100vh;
-	left: 200vw;
+	left: 100vw;
 	top: 0;
 	display: flex;
 	flex-direction: column;
@@ -190,7 +190,7 @@ color: rgb(238, 123, 69);;
 #intro{
     background-image: url(./images/ED21-DV-217.jpg);
 background-size: cover;
-width: 200vw;
+width: 100vw;
 background-position: top center;
 position: relative;
 z-index: 1;
@@ -202,7 +202,7 @@ z-index: 1;
    left: 0;
    top: 0;
    height: 100%;
-   width: 200vw;
+   width: 100vw;
    background-color: black;
    opacity: .7;
    z-index: -1;
@@ -322,7 +322,7 @@ end Into images */
 /* Hobbies section  */
 
 #hobbies .hobbies{
-    width: 200vw;
+    width: 100vw;
     flex-direction: column;
     align-items: center;
     text-align: center;
@@ -415,7 +415,7 @@ z-index: -1;
 #Skills{
   margin-top: 0;
   padding: 0;
-  width: 200vw;
+  width: 100vw;
   margin: auto;
   box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
@@ -580,7 +580,7 @@ z-index: -1;
 /* Footer  */
 
 #footer {
-    width: 200vw;
+    width: 100vw;
 	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
 }
 #footer .footer {
